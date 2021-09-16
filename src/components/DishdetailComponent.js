@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class Dishdetail extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            selectedDishDetail: this.props.dish
-        }
+    componentDidMount(){
+        console.log('Dishdetail Component componentDidMount is invoked');
+    }
+
+    componentDidUpdate(){
+        console.log('Dishdetail Component componentDidUpdate is invoked');
     }
 
     renderDish(dish) {
@@ -62,6 +63,7 @@ class Dishdetail extends Component{
     }
 
     render(){
+        console.log("Dishdetail component render is invoked");
         if (this.props.dish == null) {
             return (
                 <div></div>
